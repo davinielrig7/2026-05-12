@@ -9,3 +9,12 @@ seletorCor.addEventListener("input", (e) =>{
 
     document.documentElement.style.setProperty("--primary-color", corNova);
 });
+
+document.addEventListener("DOMContentLoaded", () =>
+{
+    const rootStyles = window.getComputedStyle(document.documentElement);
+
+    const prymaryColor = rootStyles.getPropertyValue("--primary-color").trim();
+
+    seletorCor.value = prymaryColor;
+})
